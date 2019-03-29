@@ -1,0 +1,655 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="About us - LTO Network">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="LTO Network">
+  <meta property="og:description" content="About us - LTO Network">
+  <meta property="og:image" content="/assets/brand/meta.png">
+  <meta property="og:url" content="http://lto.network/">
+
+  <title>About us - LTO Network</title>
+
+  <link rel="shortcut icon" href="assets/brand/favicon.png" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markup-templating.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <script src="https://cdn.rawgit.com/JDMcKinstry/JavaScriptDateFormat/master/Date.format.min.js"></script>
+
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="sass/extensions/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@2.1.0/dist/css/bulma-pageloader.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet"
+    href="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/css/LivIconsEvo.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <div class="sticky-header">
+    <div class="lto-logo">
+      <svg width="154px" height="18px">
+        <title>LTO Network</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path
+            d="M11.3416668,17 L0.716666776,17 L0.716666776,0.325 L4.29166678,0.325 L4.29166678,13.875 L11.3416668,13.875 L11.3416668,17 Z M19.5000001,17 L15.9250001,17 L15.9250001,3.45 L11.0500001,3.45 L11.0500001,0.325 L24.3500001,0.325 L24.3500001,3.45 L19.5000001,3.45 L19.5000001,17 Z M34.7833334,17.3 C29.7333334,17.3 26.0583334,13.7 26.0583334,8.675 C26.0583334,3.65 29.7333334,0.05 34.7833334,0.05 C39.8083334,0.05 43.4833334,3.65 43.4833334,8.675 C43.4833334,13.7 39.8083334,17.3 34.7833334,17.3 Z M34.7833334,14.15 C37.8583334,14.15 39.8333334,11.775 39.8333334,8.675 C39.8333334,5.55 37.8583334,3.2 34.7833334,3.2 C31.6833334,3.2 29.7083334,5.55 29.7083334,8.675 C29.7083334,11.775 31.6833334,14.15 34.7833334,14.15 Z M69,17 L65.575,17 L57.625,6.125 L57.625,17 L54.075,17 L54.075,0.325 L57.725,0.325 L65.45,10.8 L65.45,0.325 L69,0.325 L69,17 Z M78.7333333,17.3 C75.0583333,17.3 72.2833333,14.825 72.2833333,10.95 C72.2833333,7.45 74.8833333,4.625 78.5333333,4.625 C82.1583333,4.625 84.5833333,7.325 84.5833333,11.25 L84.5833333,12 L75.6083333,12 C75.8333333,13.475 77.0333333,14.7 79.0833333,14.7 C80.1083333,14.7 81.5083333,14.275 82.2833333,13.525 L83.7083333,15.625 C82.5083333,16.725 80.6083333,17.3 78.7333333,17.3 Z M81.5333333,9.8 C81.4333333,8.65 80.6333333,7.225 78.5333333,7.225 C76.5583333,7.225 75.7083333,8.6 75.5833333,9.8 L81.5333333,9.8 Z M91.7666667,17.3 C89.5416667,17.3 88.3666667,16.15 88.3666667,13.975 L88.3666667,7.7 L86.3666667,7.7 L86.3666667,4.925 L88.3666667,4.925 L88.3666667,1.625 L91.5416667,1.625 L91.5416667,4.925 L93.9916667,4.925 L93.9916667,7.7 L91.5416667,7.7 L91.5416667,13.125 C91.5416667,13.9 91.9416667,14.475 92.6416667,14.475 C93.1166667,14.475 93.5666667,14.3 93.7416667,14.1 L94.4166667,16.525 C93.9416667,16.95 93.0916667,17.3 91.7666667,17.3 Z M111,17 L107.6,17 L105.05,8.775 L102.5,17 L99.1,17 L95.425,4.925 L98.725,4.925 L100.975,13.05 L103.625,4.925 L106.45,4.925 L109.1,13.05 L111.35,4.925 L114.675,4.925 L111,17 Z M122.683333,17.3 C118.708333,17.3 116.308333,14.375 116.308333,10.95 C116.308333,7.525 118.708333,4.625 122.683333,4.625 C126.683333,4.625 129.083333,7.525 129.083333,10.95 C129.083333,14.375 126.683333,17.3 122.683333,17.3 Z M122.683333,14.475 C124.683333,14.475 125.783333,12.85 125.783333,10.95 C125.783333,9.075 124.683333,7.45 122.683333,7.45 C120.708333,7.45 119.608333,9.075 119.608333,10.95 C119.608333,12.85 120.708333,14.475 122.683333,14.475 Z M135.466667,17 L132.291667,17 L132.291667,4.925 L135.466667,4.925 L135.466667,6.55 C136.341667,5.5 137.816667,4.625 139.316667,4.625 L139.316667,7.725 C139.091667,7.675 138.816667,7.65 138.441667,7.65 C137.391667,7.65 135.991667,8.25 135.466667,9.025 L135.466667,17 Z M153.925,17 L149.95,17 L146.75,12.35 L145.3,13.9 L145.3,17 L142.125,17 L142.125,0.325 L145.3,0.325 L145.3,10.3 L149.875,4.925 L153.775,4.925 L149,10.4 L153.925,17 Z"
+            id="LTONetwork" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </div>
+    <div class="lto-stats-container is-hidden-mobile">
+      <div class="lto-stats network">
+        <span class="title">Network</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: globe.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            Mainnet
+          </span>
+        </div>
+      </div>
+      <div class="lto-stats transactions-today">
+        <span class="title">Transactions</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: clock.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="lto-stats transactions-monthly">
+        <span class="title">Transactions</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: calendar.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="lto-stats nodes">
+        <span class="title">Nodes</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: servers.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="nav-button-container">
+      <a class="nav-button active is-hidden-mobile" href="https://explorer.lto.network" target="_blank">
+        Explorer
+      </a>
+      <a class="nav-button" href="developers.html">
+        Developer Area
+      </a>
+    </div>
+  </div>
+  <header class="globalNav noDropdownTransition">
+      <div class="container-lg">
+        <ul class="navRoot">
+          <li class="navSection primary">
+            <a href="./index.html"><img src="assets/brand/logo-dark.svg" width="154"></a>
+            <a class="rootLink item-products hasDropdown colorize" data-dropdown="products">
+              Products
+            </a>
+            <a class="rootLink item-usecases colorize" href="usecases.html">
+              Usecases
+            </a>
+            <a class="rootLink item-company hasDropdown colorize" data-dropdown="company">
+              About us
+            </a>
+            <a class="rootLink item-company colorize" href="https://docs.lto.network">
+              Community
+            </a>
+          </li>
+
+          <li class="navSection secondary">
+            <a class="notification rootLink item-dashboard colorize has-text-dark" data-adroll-segment="submit_two" href="https://docs.lto.network">
+            Community
+          </a>
+
+
+          <li class="navSection mobile">
+            <a class="rootLink item-mobileMenu colorize">
+              <h2>Menu</h2>
+            </a>
+            <div class="popup">
+              <div class="popupContainer">
+                <a class="popupCloseButton">Close</a>
+                <div class="mobileProducts">
+                  <h4 class="has-text-dark">Products</h4>
+                  <div class="mobileProductsList">
+                    <ul>
+                        <li>
+                            <a class="linkContainer item-payments" href="proof-engine.html">
+                              <div class="productLinkContent">
+                                <span class="livicon-evo" data-options="name: gear.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                                <div class="linkDescContainer">
+                                  <h3 class="linkTitle">Proof Engine</h3>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="linkContainer item-payments" href="workflow-engine.html">
+                              <div class="productLinkContent">
+                                <span class="livicon-evo" data-options="name: diagram.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                                <div class="linkDescContainer">
+                                  <h3 class="linkTitle">Workflow Engine</h3>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mobileSecondaryNav">
+                  <ul>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="usecases.html">
+                        Usecases
+                      </a>
+                    </li>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="about-us.html">
+                        About LTO Network
+                      </a>
+                    </li>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="contact.html">
+                        Contact us
+                      </a>
+                    </li>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="https://docs.lto.network">
+                        Community
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <a class="mobileSignIn has-text-dark" data-adroll-segment="submit_two"
+                  href="developers.html">Developer Area</a>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+      <div class="dropdownRoot">
+        <div class="dropdownBackground" style="transform: translateX(452px) scaleX(0.707692) scaleY(1.1075);">
+          <div class="alternateBackground" style="transform: translateY(255.53px);"></div>
+        </div>
+        <div class="dropdownArrow" style="transform: translateX(636px) rotate(45deg);"></div>
+        <div class="dropdownContainer" style="transform: translateX(452px); width: 368px; height: 443px;">
+
+          <div class="dropdownSection left" data-dropdown="products">
+            <div class="dropdownContent">
+
+              <div class="linkGroup">
+                <ul class="productsGroup">
+                  <li>
+                    <a class="linkContainer item-payments" href="proof-engine.html">
+                      <div class="productLinkContent">
+                        <span class="livicon-evo" data-options="name: gear.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                        <div class="linkDescContainer">
+                          <h3 class="linkTitle">Proof Engine</h3>
+                          <span class="linkSub">Upgrade your existing systems by adding proof of existence to your crucial data.</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="linkContainer item-payments" href="workflow-engine.html">
+                      <div class="productLinkContent">
+                        <span class="livicon-evo" data-options="name: diagram.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                        <div class="linkDescContainer">
+                          <h3 class="linkTitle">Workflow Engine</h3>
+                          <span class="linkSub">A trustless, decentralized system that lets organizations work together efficiently.</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdownSection right" data-dropdown="company">
+            <div class="dropdownContent">
+
+              <ul class="linkGroup linkList companyGroup">
+                <li><a class="linkContainer item-about" href="about-us.html">
+                    <h3 class="linkTitle linkIcon">About LTO Network</h3>
+                  </a>
+                </li>
+                <li><a class="linkContainer item-customers" href="contact.html">
+                    <h3 class="linkTitle linkIcon">Contact
+                    </h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  <!--/nav-->
+
+
+  <!-- Hero section -->
+  <div class="hero">
+    <video autoplay="true" class="bgVideo">
+      <source src="assets/team/company-bg.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <!-- /.section -->
+
+  <!-- section -->
+  <section class="section is-medium has-background-white">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h2 class="title is-size-2 has-text-dark">Our company</h2>
+          <div class="content has-text-dark">
+            <div class="top-description">
+              <p>
+                The reason to start our own dedicated blockchain solution was winning the hackathon challenge from the
+                Dutch Ministry of Justice back in 2017. It turned out that our workflow engine which was based on a
+                deterministic finite state machine technique was a perfect match for a private blockchain.
+              </p>
+            </div>
+            <div class="bottom-description">
+              <p>
+                We modified the workflow engine in such a way it was possible to communicate the state change in the
+                respective process to the other participant in the process. These actors didn't need to wait for an email,
+                phone call or fax that a step was executed, they could all calculate it themselves on their own nodes.
+              </p>
+              <p> This was unlocking a whole new level of efficiency that could change the way organizations and
+                governments work together on repetitive processes. That when we decided to take this to the next level
+                adding also a public chain layer (as bitcoin was too slow and expensive) to secure the data transactions
+                taking place in those private workflows. LTO Network was born.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <img class="soft-image" src="https://lto.network/img/roadmap/winner-blockaton.jpg">
+        </div>
+      </div>
+      <div class="columns has-margin-top-lg">
+        <div class="column">
+          <img class="soft-image" src="./assets/images/arnold.png">
+        </div>
+        <div class="column">
+          <h2 class="title is-size-4 has-text-dark">Our mission</h2>
+          <div class="content has-text-dark">
+            <div class="bottom-description">
+              <p>Our mission was, and still is, to create and maintain a fully decentralized and highly efficient blockchain infrastructure, directly applicable and aimed at creating value for organizations.</p>
+              <p>LTO Network can be used by any company with a need for a production ready blockchain that allows for digital verification of digital assets and enable collaboration through the use of decentralized workflows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section -->
+
+    <!-- Easy as 1,2,3 section -->
+    <section class="section is-medium" style="position: relative;" id="features">
+        <div class="lto-shape-a"></div>
+        <div class="container has-text-centered">
+          <h2 class="title is-size-2 has-text-dark has-text-centered">Our philosophy</h2>
+          <div class="h1-line"></div>
+          <div class="columns has-margin-top-lg">
+            <div class="column">
+              <div class="lto-card">
+                <div class="livicon-evo" data-options="name: rocket.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></div>
+                <p class="title is-size-5 has-text-dark has-margin-top-md">Community Love</p>
+                <div class="content bottom-cta has-margin-top-md">
+                  <span class="has-text-dark">
+                    We believe that opensource is the new way to a successful business. With our community behind us we are light years faster than any other.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="lto-card">
+                <div class="livicon-evo" data-options="name: stopwatch.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></div>
+                <p class="title is-size-5 has-text-dark has-margin-top-md">Get things done</p>
+                <div class="content bottom-cta has-margin-top-md">
+                  <span class="has-text-dark">
+                    We are determined to reach our goals and work towards them with extreme attention to detail. Work smart is not that hard.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="lto-card">
+                <div class="livicon-evo" data-options="name: wine-glass.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></div>
+                <p class="title is-size-5 has-text-dark has-margin-top-md">Work hard play hard</p>
+                <div class="content bottom-cta has-margin-top-md">
+                  <span class="has-text-dark">
+                    Working should be fun too, try to beat us at a game of table soccer or a good glass of wine on a Friday afternoon.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- /.section -->
+
+  <!-- team section -->
+  <section class="section is-medium" style="position: relative;" id="team">
+    <div class="lto-shape-b"></div>
+    <div class="container">
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Meet our team</h2>
+      <div class="h1-line"></div>
+      <div class="team-container has-margin-top-xl has-text-centered">
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/rick.png">
+          </div>
+          <span class="name">Rick Schmitz</span>
+          <span class="title">CEO</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/mig.png">
+          </div>
+          <span class="name">Martijn Migchelsen</span>
+          <span class="title">CFO</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/arnold.png">
+          </div>
+          <span class="name">Arnold Daniels</span>
+          <span class="title">Lead Architect</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/sven.png">
+          </div>
+          <span class="name">Sven Stam</span>
+          <span class="title">CTO</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/martijn.png">
+          </div>
+          <span class="name">Martijn Broersma</span>
+          <span class="title">COO</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/ivan.png">
+          </div>
+          <span class="name">Ivan Golovko</span>
+          <span class="title">CMO</span>
+        </div>
+
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/moosh.png">
+          </div>
+          <span class="name">Moesjarraf Jahangier</span>
+          <span class="title">SR Backend Dev</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/yevhen.png">
+          </div>
+          <span class="name">Yevhen Horbachov</span>
+          <span class="title">Lead Frontend Dev</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/sarf.png">
+          </div>
+          <span class="name">Sarfaraaz Jahangier</span>
+          <span class="title">SR Full-stack Dev</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/mitchel.png">
+          </div>
+          <span class="name">Mitchel Kerckhaert</span>
+          <span class="title">Developer</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/jurre.png">
+          </div>
+          <span class="name">Jurre Wolsink</span>
+          <span class="title">Developer</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/benjamin.png">
+          </div>
+          <span class="name">Benjamin Roeloffs Valk</span>
+          <span class="title">Designer</span>
+        </div>
+
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/rick_ros.png">
+          </div>
+          <span class="name">Rick Ros</span>
+          <span class="title">Head of Sales</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/michael.png">
+          </div>
+          <span class="name">Michael Nieveld</span>
+          <span class="title">Legal &amp; Tax</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/maurits.png">
+          </div>
+          <span class="name">Maurits Wismeijer</span>
+          <span class="title">Legal</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/lisa_kate.png">
+          </div>
+          <span class="name">Lisa Kate Palmer</span>
+          <span class="title">Agent</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/mies.png">
+          </div>
+          <span class="name">Mies Rijperman</span>
+          <span class="title">Agent</span>
+        </div>
+        <div class="team-member">
+          <div class="team-image">
+            <img src="assets/team/isa.png">
+          </div>
+          <span class="name">Isa Branco</span>
+          <span class="title">Agent</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section -->
+
+  <section class="section is-medium blog-articles" style="position: relative;">
+    <div class="container">
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Our latest blog articles</h2>
+      <div class="h1-line"></div>
+      <div class="columns has-margin-top-lg">
+        <div class="column">
+          <div class="lto-card">
+            <img src="https://cdn-images-1.medium.com/max/1024/1*X9qPD3EhqfpHaO5igCkEcg.png">
+            <div class="content">
+              <h3 class="is-size-5 has-text-dark">Introducing: Live Contract Audits on blockchain with CertiK</h3>
+              <p>Self-executing smart contracts on the blockchain, which are fully automated and irreversible, need to be thoroughly checked before being activated. An error or typo in the smart contract code may have far-reaching (financial) consequences. For this reason...</p>
+              <a href="#" class="button hjh-button">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="lto-card">
+            <img src="https://cdn-images-1.medium.com/max/1024/1*67LSKl46DOo8ZtnbNty8SQ.jpeg">
+            <div class="content">
+              <h3 class="is-size-5 has-text-dark">Capptions & LTO Network: User experience first. Giving blockchain a mobile face.</h3>
+              <p>Capptions and LTO Network are rolling out blockchain capabilities to Capptions’ platform, serving 75 enterprise customers with over 20,000 end-users. Capptions’ platform will be utilising LTO’s flagship anchoring and decentralized workflow capabilities to provide immutable...</p>
+              <a href="#" class="button hjh-button">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="lto-card">
+            <img src="https://cdn-images-1.medium.com/max/800/1*HAciE3qkTw-MmD4vnLyX5Q.png">
+            <div class="content">
+              <h3 class="is-size-5 has-text-dark">LTO Network — Hashing guide</h3>
+              <p>Anchoring on a blockchain is a simple and cheap way to notarize documents and timestamp data. Authorization levels and ACLs offer limited protection against manipulation by those...</p>
+              <a href="#" class="button hjh-button">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- /.section -->
+
+  <section class="section is-medium" style="position: relative;">
+      <div class="lto-shape-d"></div>
+      <div class="container has-text-centered">
+        <h2 class="title is-size-2 has-text-dark has-text-centered">Working at LTO Network</h2>
+        <div class="h1-line"></div>
+        <div class="has-margin-top-lg">
+          <p>At the moment there are no open job opportunities. But feel free to reach out with awesome stuff!</p>
+        </div>
+        <a class="button hjh-button has-margin-top-lg" href="#">
+          <span>Contact us</span>
+        </a>
+      </div>
+    </section>
+    <!-- /.section -->
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <div class="field is-grouped is-centered">
+            <p class="control">
+              <a href="https://twitter.com/LTOnetwork">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://github.com/legalthings">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://www.youtube.com/channel/UCaHcF-xterKYTKSpY4xgKiw">
+                <span class="icon">
+                  <i class="fab fa-youtube"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="http://medium.com/ltonetwork">
+                <span class="icon">
+                  <i class="fab fa-medium-m"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://reddit.com/r/LTONetwork">
+                <span class="icon">
+                  <i class="fab fa-reddit"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://t.me/LTOnetwork">
+                <span class="icon">
+                  <i class="fab fa-telegram"></i>
+                </span>
+              </a>
+            </p>
+          </div>
+          <p class="is-size-6 has-text-white">
+            © 2019 LTO Network. All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/custom/explore-usecases.js"></script>
+  <script src="js/custom/menu.js"></script>
+  <script src="js/custom/products.js"></script>
+  <script src="js/custom/call-widget.js"></script>
+
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/snap.svg-min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/TweenMax.min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/DrawSVGPlugin.min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/MorphSVGPlugin.min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/verge.min.js"></script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/LivIconsEvo.defaults.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+</body>
+
+</html>

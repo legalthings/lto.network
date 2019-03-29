@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1240" height="580" viewBox="0 0 1240 580">
+  <defs>
+    <rect id="proofengine-c" width="1200" height="540" rx="4"/>
+    <filter id="proofengine-b" width="105.2%" height="111.5%" x="-2.6%" y="-5.4%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
+    </filter>
+    <path id="proofengine-d" d="M27.2186226,23.0865088 C28.0197507,24.4924951 27.0141522,26.25 25.4140662,26.25 L4.58569116,26.25 C2.98252355,26.25 1.98156919,24.4897705 2.78113477,23.0865088 L13.1954525,4.80402853 C13.9969712,3.39738303 16.0044789,3.39993186 16.8045653,4.80402853 L27.2186226,23.0865088 Z M15.0000089,19.3066407 C13.8973619,19.3066407 13.0034821,20.2116944 13.0034821,21.328125 C13.0034821,22.4445557 13.8973619,23.3496094 15.0000089,23.3496094 C16.1026559,23.3496094 16.9965357,22.4445557 16.9965357,21.328125 C16.9965357,20.2116944 16.1026559,19.3066407 15.0000089,19.3066407 Z M13.1044803,12.0404591 L13.426442,18.0170216 C13.4415027,18.2966895 13.669888,18.5156251 13.9464938,18.5156251 L16.053524,18.5156251 C16.3301298,18.5156251 16.5585151,18.2966895 16.5735758,18.0170216 L16.8955375,12.0404591 C16.9118135,11.738379 16.6742702,11.4843751 16.3754856,11.4843751 L13.6244887,11.4843751 C13.3257042,11.4843751 13.0882043,11.738379 13.1044803,12.0404591 Z"/>
+    <rect id="proofengine-a" width="433" height="283" rx="4"/>
+    <mask id="proofengine-f" width="433" height="283" x="0" y="0" fill="#fff">
+      <use xlink:href="#proofengine-a"/>
+    </mask>
+    <path id="proofengine-g" d="M54.46875,40.4192708 L54.46875,44.2018229 C54.46875,45.0934245 53.7392578,45.8229167 52.8476562,45.8229167 L30.1523438,45.8229167 C29.2607422,45.8229167 28.53125,45.0934245 28.53125,44.2018229 L28.53125,40.4192708 C28.53125,39.5276693 29.2607422,38.7981771 30.1523438,38.7981771 L52.8476562,38.7981771 C53.7392578,38.7981771 54.46875,39.5276693 54.46875,40.4192708 Z M52.8476562,50.1458333 L30.1523438,50.1458333 C29.2607422,50.1458333 28.53125,50.8753255 28.53125,51.7669271 L28.53125,55.5494792 C28.53125,56.4410807 29.2607422,57.1705729 30.1523438,57.1705729 L52.8476562,57.1705729 C53.7392578,57.1705729 54.46875,56.4410807 54.46875,55.5494792 L54.46875,51.7669271 C54.46875,50.8753255 53.7392578,50.1458333 52.8476562,50.1458333 Z M67.4375,24.7351888 L67.4375,69.5989583 C67.4375,73.1788737 64.5330404,76.0833333 60.953125,76.0833333 L22.046875,76.0833333 C18.4669596,76.0833333 15.5625,73.1788737 15.5625,69.5989583 L15.5625,13.4010417 C15.5625,9.8211263 18.4669596,6.91666667 22.046875,6.91666667 L49.6189779,6.91666667 C51.3346354,6.91666667 52.9827474,7.60563151 54.1985677,8.82145182 L65.5327148,20.155599 C66.7485352,21.3579102 67.4375,23.0195313 67.4375,24.7351888 Z M50.1458333,13.9278971 L50.1458333,24.2083333 L60.4262695,24.2083333 L50.1458333,13.9278971 Z M60.953125,69.5989583 L60.953125,30.6927083 L46.9036458,30.6927083 C45.1069336,30.6927083 43.6614583,29.2472331 43.6614583,27.4505208 L43.6614583,13.4010417 L22.046875,13.4010417 L22.046875,69.5989583 L60.953125,69.5989583 Z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(20 18)">
+    <g fill-rule="nonzero">
+      <use fill="#000" filter="url(#proofengine-b)" xlink:href="#proofengine-c"/>
+      <use fill="#FFF" xlink:href="#proofengine-c"/>
+    </g>
+    <path stroke="#767CA7" stroke-linecap="square" d="M600,0 L600,540"/>
+    <g transform="translate(99 387)">
+      <text fill="#C4183C" fill-opacity=".7" font-family="Graphik-Medium, Graphik" font-size="16" font-weight="400" letter-spacing="1">
+        <tspan x="32.484" y="51">FILE WILL ONLY BE USED FOR HASHING</tspan> <tspan x="46.869" y="67">AND WILL NOT BE STORED LOCALL</tspan> <tspan x="344.317" y="67" letter-spacing="1.75">Y</tspan>
+      </text>
+      <g opacity=".7" transform="translate(186)">
+        <mask id="proofengine-e" fill="#fff">
+          <use xlink:href="#proofengine-d"/>
+        </mask>
+        <use fill="#000" fill-rule="nonzero" xlink:href="#proofengine-d"/>
+        <g fill="#C4183C" mask="url(#proofengine-e)">
+          <circle cx="15" cy="15" r="15"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(84 84)">
+      <use fill-rule="nonzero" stroke="#313A66" stroke-dasharray="10" stroke-width="2" mask="url(#proofengine-f)" xlink:href="#proofengine-a"/>
+      <text fill="#313A66" font-family="Graphik-Medium, Graphik" font-size="30" font-weight="400" letter-spacing="-1.5">
+        <tspan x="138.075" y="181">Drag &amp; drop</tspan>
+      </text>
+      <text fill="#767CA7" font-family="Graphik-Medium, Graphik" font-size="16" font-weight="400" letter-spacing="2">
+        <tspan x="75.652" y="224">your file here, or </tspan> <tspan x="241.956" y="224">browse files</tspan>
+      </text>
+      <g transform="translate(175 56)">
+        <mask id="proofengine-h" fill="#fff">
+          <use xlink:href="#proofengine-g"/>
+        </mask>
+        <use fill="#000" fill-rule="nonzero" xlink:href="#proofengine-g"/>
+        <g fill="#6997F8" mask="url(#proofengine-h)">
+          <circle cx="41.5" cy="41.5" r="41.5"/>
+        </g>
+      </g>
+    </g>
+    <text fill="#313A66" font-family="Graphik-Medium, Graphik" font-size="30" font-weight="400" letter-spacing="-1.5">
+      <tspan x="862.91" y="278">&lt;output&gt;</tspan>
+    </text>
+  </g>
+</svg>

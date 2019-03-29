@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1024" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="hero-bg-a" x1="0%" y1="100%" y2="100%">
+      <stop offset="0%" stop-color="#77A2F8"/>
+      <stop offset="100%" stop-color="#9867D0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="1024" fill="url(#hero-bg-a)" fill-opacity=".6"/>
+</svg>

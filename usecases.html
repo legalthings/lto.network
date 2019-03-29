@@ -1,0 +1,643 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Usecases - LTO Network">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="LTO Network">
+  <meta property="og:description" content="Usecases - LTO Network">
+  <meta property="og:image" content="/assets/brand/meta.png">
+  <meta property="og:url" content="http://lto.network/">
+
+  <title>Usecases - LTO Network</title>
+
+  <link rel="shortcut icon" href="assets/brand/favicon.png" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markup-templating.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <script src="https://cdn.rawgit.com/JDMcKinstry/JavaScriptDateFormat/master/Date.format.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://legalthings.github.io/anchor-verification-component/lto-anchor-verification/lto-anchor-verification.css">
+
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="sass/extensions/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@2.1.0/dist/css/bulma-pageloader.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet"
+    href="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/css/LivIconsEvo.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body onload="init()">
+  <div class="sticky-header">
+    <div class="lto-logo">
+      <svg width="154px" height="18px">
+        <title>LTO Network</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path
+            d="M11.3416668,17 L0.716666776,17 L0.716666776,0.325 L4.29166678,0.325 L4.29166678,13.875 L11.3416668,13.875 L11.3416668,17 Z M19.5000001,17 L15.9250001,17 L15.9250001,3.45 L11.0500001,3.45 L11.0500001,0.325 L24.3500001,0.325 L24.3500001,3.45 L19.5000001,3.45 L19.5000001,17 Z M34.7833334,17.3 C29.7333334,17.3 26.0583334,13.7 26.0583334,8.675 C26.0583334,3.65 29.7333334,0.05 34.7833334,0.05 C39.8083334,0.05 43.4833334,3.65 43.4833334,8.675 C43.4833334,13.7 39.8083334,17.3 34.7833334,17.3 Z M34.7833334,14.15 C37.8583334,14.15 39.8333334,11.775 39.8333334,8.675 C39.8333334,5.55 37.8583334,3.2 34.7833334,3.2 C31.6833334,3.2 29.7083334,5.55 29.7083334,8.675 C29.7083334,11.775 31.6833334,14.15 34.7833334,14.15 Z M69,17 L65.575,17 L57.625,6.125 L57.625,17 L54.075,17 L54.075,0.325 L57.725,0.325 L65.45,10.8 L65.45,0.325 L69,0.325 L69,17 Z M78.7333333,17.3 C75.0583333,17.3 72.2833333,14.825 72.2833333,10.95 C72.2833333,7.45 74.8833333,4.625 78.5333333,4.625 C82.1583333,4.625 84.5833333,7.325 84.5833333,11.25 L84.5833333,12 L75.6083333,12 C75.8333333,13.475 77.0333333,14.7 79.0833333,14.7 C80.1083333,14.7 81.5083333,14.275 82.2833333,13.525 L83.7083333,15.625 C82.5083333,16.725 80.6083333,17.3 78.7333333,17.3 Z M81.5333333,9.8 C81.4333333,8.65 80.6333333,7.225 78.5333333,7.225 C76.5583333,7.225 75.7083333,8.6 75.5833333,9.8 L81.5333333,9.8 Z M91.7666667,17.3 C89.5416667,17.3 88.3666667,16.15 88.3666667,13.975 L88.3666667,7.7 L86.3666667,7.7 L86.3666667,4.925 L88.3666667,4.925 L88.3666667,1.625 L91.5416667,1.625 L91.5416667,4.925 L93.9916667,4.925 L93.9916667,7.7 L91.5416667,7.7 L91.5416667,13.125 C91.5416667,13.9 91.9416667,14.475 92.6416667,14.475 C93.1166667,14.475 93.5666667,14.3 93.7416667,14.1 L94.4166667,16.525 C93.9416667,16.95 93.0916667,17.3 91.7666667,17.3 Z M111,17 L107.6,17 L105.05,8.775 L102.5,17 L99.1,17 L95.425,4.925 L98.725,4.925 L100.975,13.05 L103.625,4.925 L106.45,4.925 L109.1,13.05 L111.35,4.925 L114.675,4.925 L111,17 Z M122.683333,17.3 C118.708333,17.3 116.308333,14.375 116.308333,10.95 C116.308333,7.525 118.708333,4.625 122.683333,4.625 C126.683333,4.625 129.083333,7.525 129.083333,10.95 C129.083333,14.375 126.683333,17.3 122.683333,17.3 Z M122.683333,14.475 C124.683333,14.475 125.783333,12.85 125.783333,10.95 C125.783333,9.075 124.683333,7.45 122.683333,7.45 C120.708333,7.45 119.608333,9.075 119.608333,10.95 C119.608333,12.85 120.708333,14.475 122.683333,14.475 Z M135.466667,17 L132.291667,17 L132.291667,4.925 L135.466667,4.925 L135.466667,6.55 C136.341667,5.5 137.816667,4.625 139.316667,4.625 L139.316667,7.725 C139.091667,7.675 138.816667,7.65 138.441667,7.65 C137.391667,7.65 135.991667,8.25 135.466667,9.025 L135.466667,17 Z M153.925,17 L149.95,17 L146.75,12.35 L145.3,13.9 L145.3,17 L142.125,17 L142.125,0.325 L145.3,0.325 L145.3,10.3 L149.875,4.925 L153.775,4.925 L149,10.4 L153.925,17 Z"
+            id="LTONetwork" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </div>
+    <div class="lto-stats-container is-hidden-mobile">
+      <div class="lto-stats network">
+        <span class="title">Network</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: globe.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            Mainnet
+          </span>
+        </div>
+      </div>
+      <div class="lto-stats transactions-today">
+        <span class="title">Transactions</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: clock.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="lto-stats transactions-monthly">
+        <span class="title">Transactions</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: calendar.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="lto-stats nodes">
+        <span class="title">Nodes</span>
+        <div class="lto-stats-inner">
+          <span class="image">
+            <div class="livicon-evo"
+              data-options="name: servers.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true">
+            </div>
+          </span>
+          <span class="val">
+            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="nav-button-container">
+      <a class="nav-button active is-hidden-mobile" href="https://explorer.lto.network" target="_blank">
+        Explorer
+      </a>
+      <a class="nav-button" href="developers.html">
+        Developer Area
+      </a>
+    </div>
+  </div>
+  <header class="globalNav noDropdownTransition">
+      <div class="container-lg">
+        <ul class="navRoot">
+          <li class="navSection primary">
+            <a href="./index.html"><img src="assets/brand/logo-dark.svg" width="154"></a>
+            <a class="rootLink item-products hasDropdown colorize" data-dropdown="products">
+              Products
+            </a>
+            <a class="rootLink item-usecases colorize" href="usecases.html">
+              Usecases
+            </a>
+            <a class="rootLink item-company hasDropdown colorize" data-dropdown="company">
+              About us
+            </a>
+            <a class="rootLink item-company colorize" href="https://docs.lto.network">
+              Community
+            </a>
+          </li>
+
+          <li class="navSection secondary">
+            <a class="notification rootLink item-dashboard colorize has-text-dark" data-adroll-segment="submit_two" href="https://docs.lto.network">
+            Community
+          </a>
+
+
+          <li class="navSection mobile">
+            <a class="rootLink item-mobileMenu colorize">
+              <h2>Menu</h2>
+            </a>
+            <div class="popup">
+              <div class="popupContainer">
+                <a class="popupCloseButton">Close</a>
+                <div class="mobileProducts">
+                  <h4 class="has-text-dark">Products</h4>
+                  <div class="mobileProductsList">
+                    <ul>
+                        <li>
+                            <a class="linkContainer item-payments" href="proof-engine.html">
+                              <div class="productLinkContent">
+                                <span class="livicon-evo" data-options="name: gear.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                                <div class="linkDescContainer">
+                                  <h3 class="linkTitle">Proof Engine</h3>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="linkContainer item-payments" href="workflow-engine.html">
+                              <div class="productLinkContent">
+                                <span class="livicon-evo" data-options="name: diagram.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                                <div class="linkDescContainer">
+                                  <h3 class="linkTitle">Workflow Engine</h3>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mobileSecondaryNav">
+                  <ul>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="usecases.html">
+                        Usecases
+                      </a>
+                    </li>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="about-us.html">
+                        About LTO Network
+                      </a>
+                    </li>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="contact.html">
+                        Contact us
+                      </a>
+                    </li>
+                    <li>
+                      <a class="item-pricing has-text-dark" href="https://docs.lto.network">
+                        Community
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <a class="mobileSignIn has-text-dark" data-adroll-segment="submit_two"
+                  href="developers.html">Developer Area</a>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+      <div class="dropdownRoot">
+        <div class="dropdownBackground" style="transform: translateX(452px) scaleX(0.707692) scaleY(1.1075);">
+          <div class="alternateBackground" style="transform: translateY(255.53px);"></div>
+        </div>
+        <div class="dropdownArrow" style="transform: translateX(636px) rotate(45deg);"></div>
+        <div class="dropdownContainer" style="transform: translateX(452px); width: 368px; height: 443px;">
+
+          <div class="dropdownSection left" data-dropdown="products">
+            <div class="dropdownContent">
+
+              <div class="linkGroup">
+                <ul class="productsGroup">
+                  <li>
+                    <a class="linkContainer item-payments" href="proof-engine.html">
+                      <div class="productLinkContent">
+                        <span class="livicon-evo" data-options="name: gear.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                        <div class="linkDescContainer">
+                          <h3 class="linkTitle">Proof Engine</h3>
+                          <span class="linkSub">Upgrade your existing systems by adding proof of existence to your crucial data.</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="linkContainer item-payments" href="workflow-engine.html">
+                      <div class="productLinkContent">
+                        <span class="livicon-evo" data-options="name: diagram.svg; size: 48px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></span>
+                        <div class="linkDescContainer">
+                          <h3 class="linkTitle">Workflow Engine</h3>
+                          <span class="linkSub">A trustless, decentralized system that lets organizations work together efficiently.</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdownSection right" data-dropdown="company">
+            <div class="dropdownContent">
+
+              <ul class="linkGroup linkList companyGroup">
+                <li><a class="linkContainer item-about" href="about-us.html">
+                    <h3 class="linkTitle linkIcon">About LTO Network</h3>
+                  </a>
+                </li>
+                <li><a class="linkContainer item-customers" href="contact.html">
+                    <h3 class="linkTitle linkIcon">Contact
+                    </h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  <!--/nav-->
+
+
+  <!-- Hero section -->
+  <div class="hero is-small">
+    <!-- <div style="width: 100%;height: 350px;position: absolute;z-index: 0;background: #8982e2;"></div>
+    <div style="width: 100%;height: 450px;position: absolute;z-index: 0;background: #8982e2;transform: skewY(5deg);top:200px;"></div> -->
+    <div class="hero-head">
+      <div class="hero-body" id="hero-body">
+        <div class="has-margin-top-xxl">
+          <h2 class="title is-size-2 has-text-dark has-text-centered">You are in good company!</h2>
+          <div class="h1-line is-centered"></div>
+          <h3 class="subtitle has-text-dark has-text-centered">Discover how others use LTO Network</h3>
+        </div>
+        <div class="hero-image solo-map">
+          <img src="./assets/hero/map.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.section -->
+
+  <!-- section -->
+  <section class="section is-medium usecases" style="margin-top: 50px">
+    <div class="usecase-title">
+      <div class="livicon-evo"
+        data-options="name: notebook.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true">
+      </div>
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Audit Trail</h2>
+    </div>
+    <div class="container">
+      <div class="client-container">
+        <div class="columns has-margin-top-xl">
+          <div class="column">
+            <!-- <div class="video-container">
+              <iframe width="560" height="515" src="https://www.youtube.com/embed/tDGlFmF56SY?controls=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div> -->
+            <div class="client-overlay-container">
+              <div class="image">
+                  <img src="assets/images/photo-1459787884955-4ce8aa1ca026.jpg">
+              </div>
+              <div class="description">
+                <img src="./assets/clients/capptions.svg">
+                <p>Capptions delivers a platform that enable businesses to capture data in the
+                best way possible. Built for both SMEs and enterprises, it is the best way to collect, analyse and share
+                you data. Serving 75 enterprise customers with over 20,000 daily users.</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content bottom-cta">
+                <div class="top-description">
+                <p class="has-margin-top-lg">In order to provide an extra layer of data security & strict compliance rules that are adherent to inspection reports and data entries we implemented LTO Network into our Capptions application.</p>
+              </div>
+              <div class="bottom-description">
+                <p>
+                    With more than 20.000 users of the app we need to handle a lot of data and rely on a scalable infrastructure and instant verification. LTO Network’s proof engine brings this and was implemented with just a few lines of code.
+                </p>
+              </div>
+              <blockquote>
+                "We believe that a user should be educated on what blockchain is and how it adds value in day-to-day operations. By integrating LTO Network’s anchoring service across the Capptions platform, we are able to give blockchain a mobile face."
+                <div class="author">
+                  Ruben Stolk CTO of Capptions
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium usecases">
+    <div class="usecase-title">
+      <div class="livicon-evo"
+        data-options="name: paper-plane.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true">
+      </div>
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Timestamping</h2>
+    </div>
+    <div class="container">
+      <div class="client-container reverse">
+        <div class="columns has-margin-top-xl">
+          <div class="column">
+            <!-- <div class="video-container">
+              <iframe width="560" height="515" src="https://www.youtube.com/embed/tDGlFmF56SY?controls=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div> -->
+            <div class="client-overlay-container">
+              <div class="image">
+                  <img src="assets/images/photo-1481887328591-3e277f9473dc.jpg">
+              </div>
+              <div class="description">
+                <img src="./assets/clients/signrequest-alt.svg">
+                <p>Signrequest has quickly become one of Europe’s leading digital signing
+                  parties. They believe digital signatures are no longer an expensive 'high end' product, but actually a
+                  'commodity' accessible for everyone. Easy, fast and legally binding while maintaining the highest
+                  standards of security
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content bottom-cta">
+              <div class="top-description">
+                <p class="has-margin-top-lg">SignRequest values the authenticity of your signed documents. In case there ever is a dispute about when exactly the document has been signed you need to be able to verify the date and time of signing.</p>
+              </div>
+              <div class="bottom-description">
+                <p>For this purpose SignRequest already seals the signed document with a digital certificate and sends the hash codes of the documents by email.</p>
+                <p>As an extra option SignRequest can now add the hash code to the LTO Network Blockchain. This allows signers to validate if the hash code is valid and allows for an additional timestamp.</p>
+              </div>
+              <blockquote>
+                "We experimented with document time stamping through multiple blockchains. However if we wanted to
+                include the blockchain timestamp proof in the log of the signed document we required instant
+                verification. With LTO Network we can add instant immutability to the documents being signed on our
+                platform."
+                <div class="author">
+                  Geert-Jan Persoon CEO of SignRequest
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium usecases">
+    <div class="usecase-title">
+      <div class="livicon-evo"
+        data-options="name: truck.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true">
+      </div>
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Supply Chain</h2>
+    </div>
+    <div class="container">
+      <div class="client-container">
+        <div class="columns has-margin-top-xl">
+          <div class="column">
+            <!-- <div class="video-container">
+              <iframe width="560" height="515" src="https://www.youtube.com/embed/Gz1FR5Fro40?controls=0"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div> -->
+            <div class="client-overlay-container">
+              <div class="image">
+                  <img src="https://www.avr.nl/assets/media/b4a7531def_banner-large.jpg">
+              </div>
+              <div class="description">
+                <img src="./assets/clients/ilt.svg">
+                <p>The Ministry of Infrastructure and Water Management is committed to improving quality of life, access and mobility in a clean, safe and sustainable environment. The Ministry strives to create an efficient network of roads, railways, waterways and airways, effective water management to protect against flooding, and improved air and water quality.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content bottom-cta">
+              <div class="top-description">
+                <p>The Ministry of Infrastructure and Water Management is committed to improving
+                quality of life, access and mobility in a clean, safe and sustainable environment.</p>
+              </div>
+              <div class="bottom-description">
+                  <p>The Ministry strives to create an efficient network of roads, railways, waterways and airways, effective water management to
+                      protect against flooding, and improved air and water quality.</p>
+                  <p>Combining technologies on a waste transport between EU-member states.</p>
+                  <ul class="block-list-style">
+                    <li>Permit requests are checked, verified and accepted through an artificial intelligence expert machine.</li>
+                    <li>Scales connected through the Internet-of-Things communicate weight to the process and the permit.</li>
+                    <li>Permit data is shared with all stakeholders and determines the next tasks in the process on the blockchain.</li>
+                  </ul>
+              </div>
+              <blockquote class="has-margin-top-lg">"LTO Network enabled us to digitize the international waste transportations. Earlier, a paper-based
+                transaction took place at each physical stop of the truck. Now, real-time transparency is ensured for
+                all stakeholders, while providing the authorities with the information to better predict and fine
+                illegitimate transactions. Bringing efficiency and reduction in process time."
+                <div class="author">
+                  Ben Zwartveld Enterprise Architect Ministry of Infrastructure
+                </div>
+              </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium usecases">
+    <div class="usecase-title">
+      <div class="livicon-evo"
+        data-options="name: briefcase.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true">
+      </div>
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Proof of Custody</h2>
+    </div>
+    <div class="container">
+      <div class="client-container reverse">
+        <div class="columns has-margin-top-xl">
+          <div class="column">
+            <!-- <div class="video-container">
+              <img src="https://lto.network/img/roadmap/winner-blockaton.jpg">
+            </div> -->
+            <div class="client-overlay-container">
+              <div class="image">
+                  <img src="https://lto.network/img/roadmap/winner-blockaton.jpg">
+              </div>
+              <div class="description">
+                <img src="./assets/clients/om.png">
+                <p>The Ministry of Justice and Security is responsible for maintaining the rule of law in the Netherlands, so that people can live together in freedom, regardless of their life-style or views. The Ministry is working towards a safer, more just society by giving people legal protection and, where necessary, intervening in their lives.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content bottom-cta">
+              <div class="top-description">
+                <p>When dealing with evidence you want to be absolutely certain who is responsible for it and that it is 100% immutable, as this can change someone's life!</p>
+              </div>
+              <div class="bottom-description">
+                <p>LTO Network demonstrated the applicability of this type of proof with their winning solution at the 2017 Blockathon, issued by the Dutch Ministry of Justice.</p>
+              </div>
+              <blockquote>
+                "Using LTO Network, all stakeholders in the decentralized impoundment process have real-time insight in the location of a vehicle or related object, by scanning the smart QR-codes placed on the impounded objects with every transport and storage."
+                <div class="author">
+                  Sanne Giphart Dutch District Attorney's Office
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section is-medium usecases">
+      <div class="usecase-title">
+        <div class="livicon-evo"
+          data-options="name: legal.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true">
+        </div>
+        <h2 class="title is-size-2 has-text-dark has-text-centered">Live Legal Contract</h2>
+      </div>
+      <div class="container">
+        <div class="client-container">
+          <div class="columns has-margin-top-xl">
+            <div class="column">
+              <!-- <div class="video-container">
+                <iframe width="560" height="515" src="https://www.youtube.com/embed/FEnif16TfuY?controls=0"
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div> -->
+            <div class="client-overlay-container">
+              <div class="image">
+                  <img src="assets/images/photo-1454165804606-c3d57bc86b40.jpg">
+              </div>
+              <div class="description">
+                <div class="columns">
+                  <div class="column"><img src="./assets/clients/cms.svg"></div>
+                  <div class="column"><img src="./assets/clients/mseven.png"></div>
+                </div>
+                <p>M7RE, is one of the leading specialists in the pan-European, regional, multi-let real estate market.</p>
+                <p>CMS, ranked as a Top 100 Global Law Firm operates in 41 countries with 73 offices worldwide. 4.500 CMS lawyers offer you business-focused advice tailored to your needs.</p>
+              </div>
+            </div>
+            </div>
+
+            <div class="column">
+              <div class="content bottom-cta">
+                <div class="top-description">
+                  <p>Involve third parties and share data automatically by creating legal contracts as decentralized workflows through blockchain.</p>
+                </div>
+                <div class="bottom-description">
+                  <p>This way complex inter-organizational business processes will belong to the past. M7 Real Estate and CMS law are standardizing the European decentralized commercial lease agreement of the future in collaboration with LTO Network.</p>
+                </div>
+                <blockquote>
+                  "Live Contracts simplify and automate legal processes for all parties involved. In addition to shortening these processes, blockchain technology enables us to better protect documents and every alteration that is made to these documents. We are only at the start of the blockchain era and see numerous opportunities that technology can offer CMS and the legal sector."
+                  <div class="author">
+                    Femke Schouten
+                    Partner CMS
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <div class="field is-grouped is-centered">
+            <p class="control">
+              <a href="https://twitter.com/LTOnetwork">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://github.com/legalthings">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://www.youtube.com/channel/UCaHcF-xterKYTKSpY4xgKiw">
+                <span class="icon">
+                  <i class="fab fa-youtube"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="http://medium.com/ltonetwork">
+                <span class="icon">
+                  <i class="fab fa-medium-m"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://reddit.com/r/LTONetwork">
+                <span class="icon">
+                  <i class="fab fa-reddit"></i>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="https://t.me/LTOnetwork">
+                <span class="icon">
+                  <i class="fab fa-telegram"></i>
+                </span>
+              </a>
+            </p>
+          </div>
+          <p class="is-size-6 has-text-white">
+            © 2019 LTO Network. All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/custom/explore-usecases.js"></script>
+  <script src="js/custom/menu.js"></script>
+  <script src="js/custom/products.js"></script>
+
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/snap.svg-min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/TweenMax.min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/DrawSVGPlugin.min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/MorphSVGPlugin.min.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/tools/verge.min.js"></script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/LivIconsEvo.defaults.js">
+  </script>
+  <script src="https://s3-eu-west-1.amazonaws.com/legalthings/assets/icons/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+
+  <script
+    src="https://legalthings.github.io/anchor-verification-component/lto-anchor-verification/lto-anchor-verification.js">
+  </script>
+</body>
+
+</html>
