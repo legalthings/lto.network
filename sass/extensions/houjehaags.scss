@@ -3474,7 +3474,7 @@ h2.gradientTitle {
               background-size: 50%;
               background-position: 20% 15%;
               background-repeat: no-repeat;
-              top: -230px;
+              top: -170px;
               left: -100px;
               opacity: 0;
               animation: fadeInSlide 1333ms forwards ease-in-out;
@@ -3520,6 +3520,7 @@ h2.gradientTitle {
               max-width: 125px !important;
               max-height: 50px !important;
               margin-right: 16px;
+              object-fit: contain;
             }
 
             .cardForMap p {

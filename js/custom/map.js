@@ -62,7 +62,7 @@
                 },
                 "tooltip": {
                   "description": "Agreement pending for signature",
-                  "icon": "assets/clients/signrequest.svg"
+                  "icon": "assets/clients/signrequest-alt.svg"
                 }
               },
               {

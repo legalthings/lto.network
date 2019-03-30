@@ -96,7 +96,11 @@ function getTransactionsData() {
       granularity: 'day'
     },
     success: (response => {
-      transactionsToday.find('.val').html(response.shift().transactions);
+      if (response.length) transactionsToday.find('.val').html(response.shift().transactions);
+      else transactionsToday.find('.val').html(0);
+    }),
+    error: (() => {
+      nodeElem.find('.val').html(0);
     }),
     dataType: 'json'
   });

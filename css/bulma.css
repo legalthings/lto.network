@@ -14255,7 +14255,7 @@ h2.gradientTitle {
   background-size: 50%;
   background-position: 20% 15%;
   background-repeat: no-repeat;
-  top: -230px;
+  top: -170px;
   left: -100px;
   opacity: 0;
   -webkit-animation: fadeInSlide 1333ms forwards ease-in-out;
@@ -14304,6 +14304,8 @@ h2.gradientTitle {
   max-width: 125px !important;
   max-height: 50px !important;
   margin-right: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .cardForMap p {
@@ -19451,10 +19453,9 @@ header {
 }
 
 .bgVideo {
-  margin-top: 60px;
   width: 100%;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -19501,6 +19502,7 @@ header {
 
 .blog-articles .lto-card > img {
   height: 300px;
+  max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 16px;
@@ -19645,7 +19647,7 @@ header {
 
 @media (max-width: 768px) {
   .is-size-4 {
-    font-size: 21px !important;
+    font-size: 18px !important;
   }
   #usp {
     margin-top: 45px !important;
@@ -19659,7 +19661,7 @@ header {
     margin: 0 auto;
   }
   .lto-card, .box-usp {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .lto-card .title {
@@ -19753,7 +19755,7 @@ header {
     margin-left: 8px;
   }
   .hero .hero-image.solo-map {
-    width: 65% !important;
+    width: 95% !important;
   }
   .video-text {
     position: fixed;
@@ -19764,6 +19766,34 @@ header {
     width: 90%;
     padding: 32px;
     box-sizing: border-box;
+  }
+  .mapouter {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .mapouter .gmap_canvas {
+    max-width: 100%;
+    width: 100%;
+  }
+  .globalNav {
+    position: fixed;
+    background: transparent;
+    z-index: 1000;
+  }
+  .globalNav .productLinkContent {
+    align-items: center;
+  }
+  .globalNav .rootLink.item-mobileMenu {
+    position: fixed;
+    top: -54px;
+  }
+  .globalNav .colorize {
+    color: white;
+    transition: 600ms ease-out;
+  }
+  .globalNav .colorize:hover {
+    color: black;
   }
   .lto-shape-a {
     top: -150px;
@@ -19780,6 +19810,9 @@ header {
   }
   .lto-shape-c {
     top: -15px;
+    right: 0px;
+  }
+  .lto-shape-d {
     right: 0px;
   }
 }

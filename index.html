@@ -41,65 +41,65 @@
 
 <body onload="init()">
   <div class="sticky-header">
-    <div class="lto-logo">
-      <img src="assets/brand/logo.svg" width="154">
+      <div class="lto-logo">
+        <a href="index.html"><img src="assets/brand/logo.svg" width="154"></a>
+      </div>
+      <div class="lto-stats-container is-hidden-mobile">
+        <div class="lto-stats network">
+          <span class="title">Network</span>
+          <div class="lto-stats-inner">
+            <span class="image"><div class="livicon-evo" data-options="name: globe.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
+            <span class="val">
+              Mainnet
+            </span>
+          </div>
+        </div>
+        <div class="lto-stats transactions-today">
+          <span class="title">Transactions</span>
+          <div class="lto-stats-inner">
+            <span class="image"><div class="livicon-evo" data-options="name: clock.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
+            <span class="val">
+              <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+                <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="lto-stats transactions-monthly">
+          <span class="title">Transactions</span>
+          <div class="lto-stats-inner">
+            <span class="image"><div class="livicon-evo" data-options="name: calendar.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
+            <span class="val">
+              <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+                <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="lto-stats nodes">
+          <span class="title">Nodes</span>
+          <div class="lto-stats-inner">
+            <span class="image"><div class="livicon-evo" data-options="name: servers.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
+            <span class="val">
+              <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+                <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="nav-button-container is-hidden-mobile">
+        <a class="nav-button active" href="https://explorer.lto.network" target="_blank">
+          Explorer
+        </a>
+        <a class="nav-button" href="developers.html">
+          Developer Area
+        </a>
+      </div>
     </div>
-    <div class="lto-stats-container is-hidden-mobile">
-      <div class="lto-stats network">
-        <span class="title">Network</span>
-        <div class="lto-stats-inner">
-          <span class="image"><div class="livicon-evo" data-options="name: globe.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
-          <span class="val">
-            Mainnet
-          </span>
-        </div>
-      </div>
-      <div class="lto-stats transactions-today">
-        <span class="title">Transactions</span>
-        <div class="lto-stats-inner">
-          <span class="image"><div class="livicon-evo" data-options="name: clock.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
-          <span class="val">
-            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
-              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
-            </svg>
-          </span>
-        </div>
-      </div>
-      <div class="lto-stats transactions-monthly">
-        <span class="title">Transactions</span>
-        <div class="lto-stats-inner">
-          <span class="image"><div class="livicon-evo" data-options="name: calendar.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
-          <span class="val">
-            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
-              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
-            </svg>
-          </span>
-        </div>
-      </div>
-      <div class="lto-stats nodes">
-        <span class="title">Nodes</span>
-        <div class="lto-stats-inner">
-          <span class="image"><div class="livicon-evo" data-options="name: servers.svg; size: 27px; style: lines; strokeWidth: 1; strokeColor: #fff; strokeColorAction: #b3421b; strokeColorAlt: #ffc963; strokeColorAltAction: #ab69c6; fillColor: #91e9ff; fillColorAction: #ff926b; solidColor: #6C7A89; solidColorAction: #4C5A69; solidColorBgAction: #ffffff; solidColorBg: #ffffff; tryToSharpen: true"></div></span>
-          <span class="val">
-            <svg class="loader" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
-              <circle class="external-circle" cx="60" cy="60" r="50"></circle>
-            </svg>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="nav-button-container">
-      <a class="nav-button active is-hidden-mobile" href="https://explorer.lto.network" target="_blank">
-        Explorer
-      </a>
-      <a class="nav-button" href="developers.html">
-        Developer Area
-      </a>
-    </div>
-  </div>
   <header class="globalNav noDropdownTransition">
     <div class="container-lg">
       <ul class="navRoot">
@@ -109,7 +109,7 @@
             Products
           </a>
           <a class="rootLink item-usecases colorize" href="usecases.html">
-            Usecases
+            Use cases
           </a>
           <a class="rootLink item-company hasDropdown colorize" data-dropdown="company">
             About us
@@ -163,7 +163,7 @@
                 <ul>
                   <li>
                     <a class="item-pricing has-text-dark" href="usecases.html">
-                      Usecases
+                      Use cases
                     </a>
                   </li>
                   <li>
@@ -287,7 +287,7 @@
       <div class="lto-card" id="target-audience">
         <div class="columns is-vcentered">
           <div class="column is-one-quarter">
-            <a href="#">
+            <a href="https://lto.network/documents/LTO%20Network%20-%20Visionary%20Paper.pdf">
               <img src="assets/placeholders/visionary.png" class="box">
             </a>
           </div>
@@ -327,13 +327,13 @@
   <!-- USP section -->
   <section class="section is-medium has-background-white" id="usp">
     <div class="container has-text-centered">
-      <h2 class="title is-size-2 has-text-dark has-text-centered">Production ready, complaint and easy.</h2>
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Production ready, compliant and easy.</h2>
       <div class="columns has-margin-top-xl">
 
         <div class="column">
           <div class="lto-card">
-            <div class="livicon-evo" data-options="name: check-alt.svg; size: 76px; style: original; tryToSharpen: true"></div>
-            <p class="title is-size-4 has-text-accent has-margin-top-md">Production Ready</p>
+            <div class="livicon-evo" data-options="name: check-alt.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></div>
+            <p class="title is-size-4 has-text-dark has-margin-top-md">Production Ready</p>
             <div class="content bottom-cta has-margin-top-md">
               <p class="has-text-dark">
                 Blockchain projects keep pushing technology boundaries with promising, but untried and untested new
@@ -344,15 +344,15 @@
           <img src="assets/icons/arrow-down.svg" class="arrow-down">
           <div class="box box-usp is-vcentered">
             <span>
-              LTO Network optimizes elemental Blockchain technology that has proven to work over the last decade.
+              LTO Network optimizes elemental blockchain technology that has proven to work over the last decade.
             </span>
           </div>
         </div>
 
         <div class="column">
           <div class="lto-card">
-            <div class="livicon-evo" data-options="name: balance.svg; size: 76px; style: original; tryToSharpen: true"></div>
-            <p class="title is-size-4 has-text-accent has-margin-top-md">Privacy</p>
+            <div class="livicon-evo" data-options="name: balance.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></div>
+            <p class="title is-size-4 has-text-dark has-margin-top-md">Privacy</p>
             <div class="content bottom-cta has-margin-top-md">
               <p class="has-text-dark">
                 Blockchains store data in an immutable way and share them across the network. This doesn't meet
@@ -370,8 +370,8 @@
 
         <div class="column">
           <div class="lto-card">
-            <div class="livicon-evo" data-options="name: settings.svg; size: 76px; style: original; tryToSharpen: true"></div>
-            <p class="title is-size-4 has-text-accent has-margin-top-md">Integration</p>
+            <div class="livicon-evo" data-options="name: settings.svg; size: 76px; strokeColor: #7e95ef; strokeColorAlt: #5bddb4; style: linesAlt; tryToSharpen: true"></div>
+            <p class="title is-size-4 has-text-dark has-margin-top-md">Integration</p>
             <div class="content bottom-cta has-margin-top-md">
               <p class="has-text-dark">
                 Blockchains are siloed and cannot easily communicate with your existing systems. Usually logic is redefined on Smart Contracts level.
@@ -497,7 +497,7 @@
   <!-- INSIDE NODE section -->
   <section class="section is-medium has-background-light">
     <div class="container">
-      <h2 class="title is-size-2 has-text-dark has-text-centered">Inside LTO Node</h2>
+      <h2 class="title is-size-2 has-text-dark has-text-centered">Inside a LTO Node</h2>
       <div class="h1-line is-centered"></div>
       <h3 class="subtitle has-text-dark has-text-centered is-size-4">
         A node consists of an orchestrated cluster of Docker containers, capable of scaling to any size.<br>

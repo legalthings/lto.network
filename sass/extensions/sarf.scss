@@ -1111,10 +1111,9 @@ header {
 }
 
 .bgVideo {
-  margin-top: 60px;
   width: 100%;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   object-fit: cover;
 }
 
@@ -1164,6 +1163,7 @@ header {
 
     >img {
       height: 300px;
+      max-height: 300px;
       object-fit: cover;
       margin-bottom: 16px;
     }
@@ -1254,7 +1254,7 @@ header {
 
 @media (max-width: 768px) {
   .is-size-4 {
-    font-size: 21px !important;
+    font-size: 18px !important;
   }
 
   #usp {
@@ -1272,7 +1272,7 @@ header {
   }
 
   .lto-card, .box-usp {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -1399,7 +1399,7 @@ header {
   .hero {
     .hero-image {
       &.solo-map {
-        width: 65% !important;
+        width: 95% !important;
       }
     }
   }
@@ -1413,6 +1413,43 @@ header {
       width: 90%;
       padding: 32px;
       box-sizing: border-box;
+    }
+  }
+
+  .mapouter {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .gmap_canvas {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .globalNav {
+    position: fixed;
+    background: transparent;
+    z-index: 1000;
+
+    .productLinkContent {
+      align-items: center;
+    }
+
+    .rootLink {
+      &.item-mobileMenu {
+        position: fixed;
+        top: -54px;
+      }
+    }
+    
+    .colorize {
+      color: white;
+      transition: 600ms ease-out;
+
+      &:hover {
+        color: black;
+      }
     }
   }
 
@@ -1433,6 +1470,10 @@ header {
 
   .lto-shape-c {
     top: -15px;
+    right: 0px;
+  }
+
+  .lto-shape-d {
     right: 0px;
   }
 }
