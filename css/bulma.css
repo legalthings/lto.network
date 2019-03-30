@@ -18558,6 +18558,10 @@ section .container {
   border: 1px solid black !important;
 }
 
+h1 {
+  margin: 0px !important;
+}
+
 h1.line {
   margin: 32px auto;
 }
