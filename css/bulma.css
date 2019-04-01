@@ -19376,7 +19376,7 @@ header {
 
 .lto-shape-a {
   position: absolute;
-  top: 450px;
+  top: 370px;
   right: -500px;
   width: 150%;
   height: 1900px;
@@ -19788,9 +19788,10 @@ header {
   .globalNav .productLinkContent {
     align-items: center;
   }
-  .globalNav .rootLink.item-mobileMenu {
+  .globalNav .navSection.mobile .rootLink.item-mobileMenu {
     position: fixed;
     top: -54px;
+    right: 0px;
   }
   .globalNav .colorize {
     color: white;
@@ -19801,7 +19802,7 @@ header {
   }
   .lto-shape-a {
     top: -150px;
-    right: -185px;
+    right: -180px;
     -webkit-transform: skewY(-30deg);
             transform: skewY(-30deg);
   }

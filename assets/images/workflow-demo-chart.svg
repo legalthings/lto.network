@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" viewBox="0 0 600 600" preserveAspectRatio="xMinYMin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    * { font-family: 'Arial', sans-serif; }
+    .node rect { stroke: #333; fill: #fff; }
+    .edgePath path { stroke: #333; fill: #333; stroke-width: 1.5px; }
+  </style>
+  <g transform="translate(184.557,41.42396329485294) scale(0.8685673043227752)">
+    <g class="output">
+      <g class="clusters"></g>
+      <g class="edgePaths">
+        <g class="edgePath" style="opacity: 1;">
+          <path class="path"
+            d="M135.41101264953613,39.58074951171875L135.41101264953613,79.37112331390381L135.41101264953613,119.16149711608887"
+            marker-end="url(https://playground.lto.network/#arrowhead66)" style="fill: none;"></path>
+          <defs>
+            <marker id="arrowhead66" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth"
+              markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath" style="opacity: 1;">
+          <path class="path"
+            d="M135.41101264953613,158.74224662780762L135.41101264953613,198.53262042999268L135.41101264953613,238.32299423217773"
+            marker-end="url(https://playground.lto.network/#arrowhead67)" style="fill: none;"></path>
+          <defs>
+            <marker id="arrowhead67" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth"
+              markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath" style="opacity: 1;">
+          <path class="path"
+            d="M112.68472908117275,277.9037437438965L66.99143981933594,317.69411754608154L66.99143981933594,357.4844913482666"
+            marker-end="url(https://playground.lto.network/#arrowhead68)" style="fill: none;"></path>
+          <defs>
+            <marker id="arrowhead68" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth"
+              markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath" style="opacity: 1;">
+          <path class="path"
+            d="M158.13729621789952,277.9037437438965L203.83058547973633,317.69411754608154L203.83058547973633,357.4844913482666"
+            marker-end="url(https://playground.lto.network/#arrowhead69)" style="fill: none;"></path>
+          <defs>
+            <marker id="arrowhead69" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth"
+              markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath" style="opacity: 1;">
+          <path class="path"
+            d="M66.99143981933594,397.06524085998535L66.99143981933594,436.8556146621704L66.99143981933594,476.64598846435547"
+            marker-end="url(https://playground.lto.network/#arrowhead70)" style="fill: none;"></path>
+          <defs>
+            <marker id="arrowhead70" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth"
+              markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath" style="opacity: 1;">
+          <path class="path"
+            d="M203.83058547973633,397.06524085998535L203.83058547973633,436.8556146621704L203.83058547973633,476.64598846435547"
+            marker-end="url(https://playground.lto.network/#arrowhead77)" style="fill: none;"></path>
+          <defs>
+            <marker id="arrowhead77" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth"
+              markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path>
+            </marker>
+          </defs>
+        </g>
+      </g>
+      <g class="edgeLabels">
+        <g class="edgeLabel" style="opacity: 1;"
+          transform="translate(157.01936721801758,79.37112331390381)">
+          <g transform="translate(-16.608354568481445,-9.790373802185059)" class="label"><text>
+              <tspan xml:space="preserve" dy="1em" x="1">start</tspan>
+            </text></g>
+        </g>
+        <g class="edgeLabel" style="opacity: 1;"
+          transform="translate(159.98294067382812,198.53262042999268)">
+          <g transform="translate(-19.571928024291992,-9.790373802185059)" class="label"><text>
+              <tspan xml:space="preserve" dy="1em" x="1">verify</tspan>
+            </text></g>
+        </g>
+        <g class="edgeLabel" style="opacity: 1;"
+          transform="translate(102.77819442749023,317.69411754608154)">
+          <g transform="translate(-30.786754608154297,-9.790373802185059)" class="label"><text>
+              <tspan xml:space="preserve" dy="1em" x="1">continue</tspan>
+            </text></g>
+        </g>
+        <g class="edgeLabel" style="opacity: 1;"
+          transform="translate(232.1554889678955,317.69411754608154)">
+          <g transform="translate(-23.32490348815918,-9.790373802185059)" class="label"><text>
+              <tspan xml:space="preserve" dy="1em" x="1">cancel</tspan>
+            </text></g>
+        </g>
+        <g class="edgeLabel" style="opacity: 1;"
+          transform="translate(119.77022552490234,436.8556146621704)">
+          <g transform="translate(-47.778785705566406,-9.790373802185059)" class="label"><text>
+              <tspan xml:space="preserve" dy="1em" x="1">notify_accept</tspan>
+            </text></g>
+        </g>
+      </g>
+      <g class="nodes">
+        <g class="node" style="opacity: 1;" transform="translate(135.41101264953613,19.790374755859375)">
+          <rect rx="5" ry="5" x="-31.08017349243164" y="-19.79037380218506" width="62.16034698486328"
+            height="39.58074760437012" style="fill: #7f7"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-21.08017349243164,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">:initial</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" style="opacity: 1;" transform="translate(135.41101264953613,138.95187187194824)">
+          <rect rx="5" ry="5" x="-29.571928024291992" y="-19.79037380218506" width="59.143856048583984"
+            height="39.58074760437012"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-19.571928024291992,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">verify</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" style="opacity: 1;" transform="translate(135.41101264953613,258.1133689880371)">
+          <rect rx="5" ry="5" x="-35.85628890991211" y="-19.79037380218506" width="71.71257781982422"
+            height="39.58074760437012"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-25.85628890991211,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">waiting</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" style="opacity: 1;" transform="translate(66.99143981933594,377.274866104126)">
+          <rect rx="5" ry="5" x="-42.82421112060547" y="-19.79037380218506" width="85.64842224121094"
+            height="39.58074760437012"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-32.82421112060547,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">accepted</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" style="opacity: 1;" transform="translate(66.99143981933594,496.43636322021484)">
+          <rect rx="5" ry="5" x="-49.45697021484375" y="-19.79037380218506" width="98.9139404296875"
+            height="39.58074760437012"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-39.45697021484375,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">add_actors</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" style="opacity: 1;" transform="translate(203.83058547973633,377.274866104126)">
+          <rect rx="5" ry="5" x="-44.01493453979492" y="-19.79037380218506" width="88.02986907958984"
+            height="39.58074760437012"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-34.01493453979492,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">cancelled</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" style="opacity: 1;" transform="translate(203.83058547973633,496.43636322021484)">
+          <rect rx="5" ry="5" x="-31.69758415222168" y="-19.79037380218506" width="63.39516830444336"
+            height="39.58074760437012" style="fill: #f77"></rect>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-21.69758415222168,-9.790373802185059)"><text>
+                <tspan xml:space="preserve" dy="1em" x="1">:failed</tspan>
+              </text></g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

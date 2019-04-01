@@ -203,7 +203,7 @@ section {
 
 h1 {
   margin: 0px !important;
-  
+
   &.line {
     margin: 32px auto;
   }
@@ -1038,7 +1038,7 @@ header {
 
 .lto-shape-a {
   position: absolute;
-  top: 450px;
+  top: 370px;
   right: -500px;
   width: 150%;
   height: 1900px;
@@ -1438,13 +1438,16 @@ header {
       align-items: center;
     }
 
-    .rootLink {
-      &.item-mobileMenu {
-        position: fixed;
-        top: -54px;
+    .navSection.mobile {
+      .rootLink {
+        &.item-mobileMenu {
+          position: fixed;
+          top: -54px;
+          right: 0px;
+        }
       }
     }
-    
+
     .colorize {
       color: white;
       transition: 600ms ease-out;
@@ -1457,7 +1460,7 @@ header {
 
   .lto-shape-a {
     top: -150px;
-    right: -185px;
+    right: -180px;
     transform: skewY(-30deg);
   }
 
