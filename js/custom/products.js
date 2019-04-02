@@ -85,8 +85,7 @@ function getTransactionsData() {
   const transactionsMonthly = $('.lto-stats.transactions-monthly');
 
   const today = new Date();
-  const firstDayMonth = new Date(today.getFullYear(), today.getMonth(), 1);
-  const lastDayMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+  const thirtyDaysAgo = new Date(today.getFullYear(), today.getMonth(), today.getDay() - 30);
 
   $.ajax({
     url: transactionsApi,
@@ -96,11 +95,12 @@ function getTransactionsData() {
       granularity: 'day'
     },
     success: (response => {
+      transactionsToday.find('.title').html('Transactions (today)');
       if (response.length) transactionsToday.find('.val').html(response.shift().transactions);
       else transactionsToday.find('.val').html(0);
     }),
     error: (() => {
-      nodeElem.find('.val').html(0);
+      transactionsToday.find('.val').html(0);
     }),
     dataType: 'json'
   });
@@ -108,13 +108,22 @@ function getTransactionsData() {
   $.ajax({
     url: transactionsApi,
     data: {
-      startdate: firstDayMonth.format('m-d-Y'),
-      enddate: lastDayMonth.format('m-d-Y'),
+      startdate: thirtyDaysAgo.format('m-d-Y'),
+      enddate: today.format('m-d-Y'),
       granularity: 'day'
     },
     success: (response => {
-      const totalTransactions = response.reduce((total, val) => total + parseInt(val.transactions, 10), 0);
-      transactionsMonthly.find('.val').html(totalTransactions);
+      transactionsMonthly.find('.title').html('Transactions (30 days)');
+
+      if (response.length) {
+        const totalTransactions = response.reduce((total, val) => total + parseInt(val.transactions, 10), 0);
+        transactionsMonthly.find('.val').html(totalTransactions);
+      } else {
+        transactionsMonthly.find('.val').html(0);
+      }
+    }),
+    error: (() => {
+      transactionsMonthly.find('.val').html(0);
     }),
     dataType: 'json'
   });
