@@ -1138,7 +1138,7 @@ header {
     font-size: 14px;
   }
 
-  .lto-text-field {
+  input, textarea {
     padding: 13px;
     color: rgba(0,0,0,.7);
     border-radius: 3px;
@@ -1147,7 +1147,7 @@ header {
     border: 1px solid #d6dcf2;
   }
 
-  .textarea {
+  textarea {
     height: 250px;
 
     &:focus {

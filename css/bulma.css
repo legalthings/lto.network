@@ -19480,7 +19480,7 @@ header {
   font-size: 14px;
 }
 
-.contact-container .lto-text-field {
+.contact-container input, .contact-container textarea {
   padding: 13px;
   color: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
@@ -19489,11 +19489,11 @@ header {
   border: 1px solid #d6dcf2;
 }
 
-.contact-container .textarea {
+.contact-container textarea {
   height: 250px;
 }
 
-.contact-container .textarea:focus {
+.contact-container textarea:focus {
   box-shadow: none !important;
 }
 
