@@ -18762,7 +18762,23 @@ header {
 #team .team-member .socials {
   margin-top: 8px;
   opacity: 0.8;
-  display: none;
+}
+
+#team .team-member .socials li {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+#team .team-member .socials li:first-child {
+  margin-left: 0px;
+}
+
+#team .team-member .socials li a {
+  color: black;
+}
+
+#team .team-member .socials li a:hover {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #team .team-image {
@@ -19497,16 +19513,28 @@ header {
   box-shadow: none !important;
 }
 
+.blog-articles .wrapped-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
 .blog-articles .lto-card {
   height: 640px;
+  max-width: 350px;
   display: flex;
   flex-direction: column !important;
   padding: 0px;
+  margin-right: 16px;
+  margin-bottom: 16px;
 }
 
 .blog-articles .lto-card > img {
-  height: 300px;
-  max-height: 300px;
+  height: 225px;
+  min-height: 225px;
+  max-height: 225px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 16px;
@@ -19779,6 +19807,13 @@ header {
   .mapouter .gmap_canvas {
     max-width: 100%;
     width: 100%;
+  }
+  .blog-articles .lto-card {
+    height: unset;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+    margin-bottom: 16px;
   }
   .globalNav {
     position: fixed;

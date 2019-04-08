@@ -408,7 +408,23 @@ header {
     .socials {
       margin-top: 8px;
       opacity: 0.8;
-      display: none;
+
+      li {
+        display: inline-block;
+        margin-left: 4px;
+
+        &:first-child {
+          margin-left: 0px;
+        }
+
+        a {
+          color: black;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
     }
   }
 
@@ -1157,15 +1173,27 @@ header {
 }
 
 .blog-articles {
+  .wrapped-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
   .lto-card {
     height: 640px;
+    max-width: 350px;
     display: flex;
     flex-direction: column !important;
     padding: 0px;
+    margin-right: 16px;
+    margin-bottom: 16px;
 
     >img {
-      height: 300px;
-      max-height: 300px;
+      height: 225px;
+      min-height: 225px;
+      max-height: 225px;
       object-fit: cover;
       margin-bottom: 16px;
     }
@@ -1426,6 +1454,16 @@ header {
     .gmap_canvas {
       max-width: 100%;
       width: 100%;
+    }
+  }
+
+  .blog-articles {
+    .lto-card {
+      height: unset;
+      width: 100%;
+      max-width: 100%;
+      margin: 0px;
+      margin-bottom: 16px;
     }
   }
 
