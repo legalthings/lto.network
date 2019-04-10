@@ -33,6 +33,10 @@ const peersApi = 'https://nodes.lto.network/peers/all';
 const transactionsApi = 'https://stats.lto.network/transactions';
 
 $(document).ready(function () {
+  if (!/Mobi|Android/i.test(navigator.userAgent)) {
+    initializeSocials();
+  }
+
   $('.tiles .tile').click(tile => {
     if (tile.target !== tile.currentTarget) {
       tile.target = tile.currentTarget;
@@ -142,4 +146,49 @@ function getPeers() {
     }),
     dataType: 'json'
   });
+}
+
+function initializeSocials() {
+  const socialData = [
+    {
+      url: 'https://twitter.com/LTOnetwork',
+      icon: 'fa-twitter'
+    },
+    {
+      url: 'https://github.com/legalthings',
+      icon: 'fa-github'
+    },
+    {
+      url: 'https://www.youtube.com/channel/UCaHcF-xterKYTKSpY4xgKiw',
+      icon: 'fa-youtube'
+    },
+    {
+      url: 'http://medium.com/ltonetwork',
+      icon: 'fa-medium-m'
+    },
+    {
+      url: 'https://reddit.com/r/LTONetwork',
+      icon: 'fa-reddit'
+    },
+    {
+      url: 'https://t.me/LTOnetwork',
+      icon: 'fa-telegram'
+    }
+  ]
+
+  $('.footer').before('<div class="socials-sidebar"></div>');
+
+  for (let s of socialData) {
+    const element = `
+      <a href="${s.url}">
+        <i class="fab ${s.icon}"></i>
+      </a>
+    `;
+
+    $('.socials-sidebar').append(element);
+  }
+
+  setTimeout(() => {
+    $('.socials-sidebar').addClass('visible');
+  }, 333)
 }

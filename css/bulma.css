@@ -19390,6 +19390,44 @@ header {
   box-shadow: none !important;
 }
 
+.socials-sidebar {
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  -webkit-transform: translate(-150px, -50%);
+          transform: translate(-150px, -50%);
+  transition: 740ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.socials-sidebar a {
+  width: 48px;
+  height: 48px;
+  padding: 4px;
+  font-size: 28px;
+  color: white;
+  background: #9867cf;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.socials-sidebar a:hover {
+  color: white;
+  background: #7b9bf3;
+}
+
+.socials-sidebar a:last-of-type {
+  margin-bottom: 0px;
+}
+
+.socials-sidebar.visible {
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+}
+
 .lto-shape-a {
   position: absolute;
   top: 370px;
@@ -19834,6 +19872,14 @@ header {
   }
   .globalNav .colorize:hover {
     color: black;
+  }
+  .socials-sidebar {
+    -webkit-transform: translate(-150px, -50%);
+            transform: translate(-150px, -50%);
+  }
+  .socials-sidebar.visible {
+    -webkit-transform: translate(-150px, -50%);
+            transform: translate(-150px, -50%);
   }
   .lto-shape-a {
     top: -150px;
