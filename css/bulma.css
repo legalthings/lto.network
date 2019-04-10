@@ -19274,6 +19274,8 @@ header {
   padding: 16px;
   max-width: 268px;
   max-height: unset !important;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .f-client-container .client-description {
