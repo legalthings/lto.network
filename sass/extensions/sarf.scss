@@ -58,7 +58,7 @@ blockquote {
   }
 
   .rootLink {
-    line-height: 3.4;
+    line-height: 3.55;
     height: 60px;
   }
 
@@ -1556,6 +1556,11 @@ header {
     &:focus {
       box-shadow: none !important;
     }
+  }
+
+  button {
+   display: flex;
+   flex-direction: column;
   }
 }
 

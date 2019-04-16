@@ -18421,7 +18421,7 @@ blockquote .author:before {
 }
 
 .globalNav .rootLink {
-  line-height: 3.4;
+  line-height: 3.55;
   height: 60px;
 }
 
@@ -19962,6 +19962,11 @@ header {
 
 .contact-container textarea:focus {
   box-shadow: none !important;
+}
+
+.contact-container button {
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-articles .wrapped-flex-container {
