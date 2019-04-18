@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  const allowedAuthors = [
+    '@IvanGBi',
+    'LTO Network',
+    'Martijn Broersma'
+  ];
+
   const container = $('#mediumArticles');
   const query = {
     rss_url: 'https://medium.com/feed/ltonetwork'
@@ -12,7 +18,7 @@ $(document).ready(function () {
       }
 
       let html = '';
-      response.items = response.items.slice(0, 6);
+      response.items = response.items.filter(r => allowedAuthors.some(a => a === r.author)).slice(0, 3);
 
       $.each(response.items, (i, item) => {
         const description = $('<div></div>').html(item.description);
