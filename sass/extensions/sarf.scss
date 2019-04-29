@@ -1674,6 +1674,80 @@ header {
   }
 }
 
+.leaderboards-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: unset;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .last-updated {
+    font-size: 20px;
+    text-align: right;
+  }
+
+  .leaderboards-content {
+    position: relative;
+  }
+
+  .lb-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 678ms ease-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .lb-data {
+      display: block;
+      line-height: 2;
+
+      &:nth-child(1) {
+        font-weight: 900;
+        width: 40px;
+        height: 40px;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 8px;
+      }
+
+      &:nth-child(2) {
+        font-family: 'Courier';
+        flex: 1 1 auto;
+      }
+
+      &:nth-child(3) {
+        span {
+          display: inline-block;
+          font-size: 10px;
+          border-radius: 5px;
+          color: white;
+          background: #9862cb;
+          padding: 4px;
+          line-height: 1;
+          vertical-align: middle;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .is-size-4 {
     font-size: 18px !important;
@@ -1880,7 +1954,7 @@ header {
 
     .colorize {
       color: white;
-      transition: 600ms ease-out;
+      transition: 400ms ease-out;
 
       &:hover {
         color: black;
@@ -1938,6 +2012,49 @@ header {
 
   .lto-shape-d {
     right: 0px;
+  }
+
+
+  .leaderboards-container {
+    .leaderboards-header {
+      display: none;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .lb-row {
+      flex-direction: column;
+      padding: 32px;
+
+      .lb-data {
+        display: block;
+        text-align: center;
+        margin-bottom: 8px;
+
+        &:nth-child(1) {
+          width: 50px;
+          height: 50px;
+          font-size: 33px;
+          margin: 0 auto;
+          margin-bottom: 16px;
+        }
+
+        &:nth-child(2) {
+          font-size: 18px;
+          word-break: break-all;
+        }
+
+        &:nth-child(3) {
+          width: 100%;
+          min-width: auto;
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
