@@ -328,23 +328,29 @@
           page: 1
         },
         success: (response => {
-          if (response) {
+          if (response && response.data.length) {
             populateLeaderboards(response);
+          } else {
+            displayLeaderboardsError();
           }
         }),
         error: ((err) => {
-          const lbContainer = $('.leaderboards-content');
-
-          lbContainer.append(`
-            <div class="lb-row">
-              <div class="lb-data"></div>
-              <div class="lb-data">No leaderboard data available...</div>
-            </div>
-          `);
+          displayLeaderboardsError();
         }),
         dataType: 'json'
       });
 
+
+      function displayLeaderboardsError() {
+        const lbContainer = $('.leaderboards-content');
+
+        lbContainer.append(`
+          <div class="lb-row">
+            <div class="lb-data"></div>
+            <div class="lb-data">No leaderboard data available...</div>
+          </div>
+        `);
+      }
 
       function populateLeaderboards(response) {
         const lbWrapper = $('.leaderboards-container');
