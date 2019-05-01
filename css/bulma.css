@@ -20204,6 +20204,10 @@ header {
   font-weight: 300;
 }
 
+.leaderboards-container .lb-row .lb-data.negative {
+  color: red;
+}
+
 .leaderboards-container .lb-row .lb-data:nth-child(3) span {
   display: inline-block;
   font-size: 10px;
@@ -20439,7 +20443,11 @@ header {
     margin-bottom: 16px;
   }
   .leaderboards-container .lb-row .lb-data:nth-child(2) {
+    line-height: 1.3;
+  }
+  .leaderboards-container .lb-row .lb-data:nth-child(2) span {
     font-size: 18px;
+    margin-top: 16px;
     word-break: break-all;
   }
   .leaderboards-container .lb-row .lb-data:nth-child(3) {

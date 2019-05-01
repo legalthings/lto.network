@@ -101,7 +101,7 @@
         <div class="leaderboards-content">
         </div>
       </div>
-      <p class="has-text-light has-text-centered">Provided with love by <a href="https://lto-lease.com" target="_blank">lto-lease.com</a></p>
+      <p class="has-text-light has-text-centered has-margin-top-md">Provided with love by <a href="https://lto-lease.com" target="_blank">lto-lease.com</a></p>
     </div>
   </section>
 
@@ -341,7 +341,6 @@
         dataType: 'json'
       });
 
-
       function displayLeaderboardsError() {
         const lbContainer = $('.leaderboards-content');
 
@@ -380,12 +379,14 @@
               break;
           }
 
+          const amount = (Math.round((responseElement.amount * 1000)/10)/100).toFixed(2);
+
           lbContainer.append(`
             <a href="https://explorer.lto.network/address/${responseElement.node}" target="_blank">
               <div class="lb-row">
                 <div class="lb-data">${num}</div>
                 <div class="lb-data">${responseElement.nickname} <span>${responseElement.node}</span></div>
-                <div class="lb-data">${responseElement.amount} <span>LTO</span></div>
+                <div class="lb-data ${amount < 0 ? 'negative' : ''}">${amount} <span>LTO</span></div>
                 <div class="lb-data" style="margin-left: 16px;"><i class="fas fa-chevron-right"></i></div>
               </div>
             </a>
