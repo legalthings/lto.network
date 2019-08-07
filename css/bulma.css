@@ -19628,7 +19628,8 @@ header {
   font-size: 14px;
 }
 
-.gon-page .competition-container input, .gon-page .competition-container textarea {
+.gon-page .competition-container input,
+.gon-page .competition-container textarea {
   padding: 13px;
   color: rgba(255, 255, 255, 0.9);
   border-radius: 3px;
@@ -19947,13 +19948,20 @@ header {
   font-size: 14px;
 }
 
-.contact-container input, .contact-container textarea {
+.contact-container input,
+.contact-container textarea,
+.contact-container select {
   padding: 13px;
   color: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
   font-size: 18px;
   width: 100%;
   border: 1px solid #d6dcf2;
+}
+
+.contact-container select {
+  height: 48px !important;
+  line-height: 20px !important;
 }
 
 .contact-container textarea {
@@ -20235,7 +20243,8 @@ header {
     width: 90%;
     margin: 0 auto;
   }
-  .lto-card, .box-usp {
+  .lto-card,
+  .box-usp {
     width: 100%;
     margin: 0 auto;
   }
