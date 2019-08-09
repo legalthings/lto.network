@@ -276,10 +276,10 @@
 
   <div class="hero is-small">
     <div
-      style="width: 100%;height: 400px;position: absolute;z-index: 0;background: linear-gradient(90deg,#77a2f8 0,#9867d0 90%);">
+      style="width: 100%;height: 840px;position: absolute;z-index: 0;background: linear-gradient(90deg,#77a2f8 0,#9867d0 90%);">
     </div>
     <div
-      style="width: 100%;height: 400px;position: absolute;z-index: 0;background: linear-gradient(90deg,#77a2f8 0,#9867d0 90%);transform: skewY(5deg);top:250px;">
+      style="width: 100%;height: 840px;position: absolute;z-index: 0;background: linear-gradient(90deg,#77a2f8 0,#9867d0 90%);transform: skewY(5deg);top:250px;">
     </div>
     <div class="hero-head">
       <div class="hero-body" id="hero-body">
@@ -292,17 +292,27 @@
         <div class="container contact-left-container has-text-left">
           <div class="columns">
             <div class="column">
-              <h1 class="is-size-2 has-text-white has-text-weight-semibold">Ready to get started?</h1>
+              <h1 class="is-size-2 has-text-white has-text-weight-semibold">Ready to dive deeper?</h1>
               <div class="has-text-white" style="max-width:450px">
-                <p class="is-size-5">Every day, we help system integrators, independent software vendors and end clients with our blockchain technology. Fill in the form on the right for the LTO Network team to get in touch with you. </p>
-                <p class="is-size-5">Alternatively you can email us at <strong><a
+                <p class="is-size-5">Every day, we help system integrators, independent software vendors and other organizations to build new solutions with our blockchain technology. Are you ready to learn more about the blockchain solutions & products built on LTO Network?</p>
+                <div class="content"                
+                <p class="subhead is-size-5">Fill out the form to receive our free info package which contains:</p>
+                <ul class="block-list-style">
+                <li>LTO Network Presentation</li>
+                <li>Access to the Demo Portal</li>
+                <li>Technical documentation + playground (Developers only)</li>
+                <li>Anchoring node including 100 LTO tokens (Developers only)</li>
+                </ul>
+                </div>
+
+                <p class="is-size-5 has-margin-top-xs">Alternatively you can email us at <strong><a
                       href="mailto:support@ltonetwork.com">support@ltonetwork.com</a></strong></p>
                 <p class="is-size-6 has-text-weight-bold">Note: Acquisition is not appreciated!</p>
               </div>
             </div>
             <div class="column contact-container lto-card">
               <p class="title is-size-4 has-text-dark">
-                Get in touch with LTO Network
+                Receive your <strong>free</strong> onboarding package
               </p>
              <form method="POST" action="https://firm24.activehosted.com/proc.php" id="_form_135_" class="_form _form_135 _inline-form  _dark" novalidate>
               <input type="hidden" name="u" value="135" />
@@ -369,23 +379,24 @@
                   </div>
                 </div>
                 <div class="column">
-                  <div class="_form_element _field118 _full_width " >
+                  <div class="_form_element _field119 _full_width " >
                     <label class="_form-label">
                       Type of organization
                     </label>
                   <div class="_field-wrapper">
                   <div class="select">
-                    <select name="field[118]" >
-                        <option selected>
-                      </option>
-                      <option value="System integrator" >
+                    <select name="field[119]" >
+                      <option value="System integrator" selected>
                         System integrator
                       </option>
                       <option value="Software vendor" >
                         Software vendor
                       </option>
-                      <option value="End client" >
-                        End client
+                      <option value="Business" >
+                        Business
+                      </option>
+                      <option value="Government" >
+                        Government
                       </option>
                     </select>
                     </div>
@@ -416,7 +427,7 @@
               <div class="_form-thank-you" style="display:none;">
               </div>
             </form><script type="text/javascript">
-window.cfields = {"73":"name_company","118":"type_of_organization","94":"message"};
+window.cfields = {"73":"name_company","119":"type_of_organization_lto","94":"message"};
 window._show_thank_you = function(id, message, trackcmp_url) {
   var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
   form.querySelector('._form-content').style.display = 'none';
