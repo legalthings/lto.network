@@ -420,11 +420,7 @@
                   <div class="columns is-desktop is-vcentered">
                     <div class="column">
                       <div class="_form_element _x76492578 _full_width " >
-                        <label class="_form-label">
-                          Please verify your request*
-                        </label>
-                        <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
-                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go"></div>
                       </div>
                     </div>
                     <div class="column">
@@ -743,7 +739,7 @@
                       grecaptcha.render(recaptcha_id, {"sitekey":sitekey,"stoken":stoken});
                     }
                   }
-                };  _load_script("//www.google.com/recaptcha/api.js?onload=recaptcha_callback&render=explicit");
+                };  _load_script("https://www.google.com/recaptcha/api.js?onload=recaptcha_callback&render=explicit");
                 window._old_serialize = null;
                 if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;
                 _load_script("//d3rxaij56vjege.cloudfront.net/form-serialize/0.3/serialize.min.js", function() {
